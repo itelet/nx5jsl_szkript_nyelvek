@@ -1,0 +1,1 @@
+print("NX5JSL Szkript nyelvek beadandó")
