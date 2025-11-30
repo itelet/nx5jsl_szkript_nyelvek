@@ -10,7 +10,7 @@ from imageai.Detection import ObjectDetection
 import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
 
-def send_email(subject, body, sender_email, receiver_email, password, image_path, log_callback=None):
+def SZA_send_email(subject, body, sender_email, receiver_email, password, image_path, log_callback=None):
     message = MIMEMultipart()
     message["From"] = sender_email
     message["To"] = receiver_email
@@ -41,7 +41,7 @@ def send_email(subject, body, sender_email, receiver_email, password, image_path
         except:
             pass
 
-class PersonDetectionApp:
+class SZA_PersonDetectionApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Person Detection System")
@@ -246,7 +246,7 @@ class PersonDetectionApp:
                                                 log_file.write(f"{current_time} - Person detected: {prob}%\n")
                                             
                                             if email_enabled:
-                                                send_email(
+                                                SZA_send_email(
                                                     "Person Detected",
                                                     f"A person was detected in the image '{image_name}' at {current_time}",
                                                     sender_email, receiver_email, password, output_image_path,
@@ -286,5 +286,5 @@ class PersonDetectionApp:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    app = PersonDetectionApp(root)
+    app = SZA_PersonDetectionApp(root)
     root.mainloop()
