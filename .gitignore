@@ -217,3 +217,7 @@ __marimo__/
 
 # Models
 *.pt
+
+# log
+logs.txt
+processed_images.txt
