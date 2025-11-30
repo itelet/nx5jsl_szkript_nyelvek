@@ -114,3 +114,13 @@ Feladata: e-mail küldése SMTP-n keresztül, a feldolgozott képpel csatolmány
 
 - Multipart üzenetet épít: kép csatolmány + szöveges body
 - Hibakezelést végez, és opcionálisan naplóz a log_callback-en át (pl. GUI logba)
+
+-------
+
+FONTOS
+
+A megfelelő működéshez legalább egy lightweight AI training model szükséges. A YOLOv3.pt (237 MB) model-t ajánlom, mert az eléggé lightweight viszont jól optimalizált és a feladathoz hasonló adaton lett trainelve.
+
+A tiny-yolov3.pt is működhet (~34 MB), viszont az ott kapott eredmény pontatlanabb lesz.
+
+Ezek a modellek elérhetőek a következő linken: https://github.com/OlafenwaMoses/ImageAI/releases
